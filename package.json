@@ -11,10 +11,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build"
   },
-  "engines": {
-    "node": "24.x"
-  },
-  "browserslist": {
+   "browserslist": {
     "production": [">0.2%", "not dead", "not op_mini all"],
     "development": ["last 1 chrome version"]
   }
