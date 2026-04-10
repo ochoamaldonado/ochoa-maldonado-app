@@ -29,7 +29,7 @@ const COMPLEJIDAD_CFG = {
   compleja: { label:"Análisis Detallado",   time:"📋 Máx. 6 horas",   color:B.red,    bg:`${B.red}15`,    glow:`${B.red}30` },
 };
 
-const MAX_PALABRAS = 150;
+const MAX_PALABRAS = 300;
 
 // ══════════════════════════════════════════════════════════════
 //  DATOS
@@ -65,6 +65,15 @@ const TARIFARIO_CONSULTAS = [
   { id:"tributario",area:"Tributario",precio:45,icon:"📊",complejidad:"compleja",
     desc:"SUNAT, fiscalizaciones, multas, fraccionamiento.",
     faqs:["SUNAT me fiscaliza, ¿qué derechos tengo?","¿Puedo fraccionar deuda tributaria?","¿Cómo impugno una multa de SUNAT?","¿RUS, RER o Régimen General?"] },
+  { id:"consumidor",area:"Protección al Consumidor",precio:25,icon:"🛡️",complejidad:"moderada",
+    desc:"Reclamos ante INDECOPI, productos defectuosos, servicios incumplidos, publicidad engañosa.",
+    faqs:["Me vendieron un producto defectuoso, ¿qué hago?","Una empresa no cumplió el servicio que pagué.","¿Cómo presento un reclamo ante INDECOPI?","Me cobraron de más en mi tarjeta, ¿puedo reclamar?","Una aerolínea canceló mi vuelo, ¿qué derechos tengo?"] },
+  { id:"datos",area:"Protección de Datos Personales",precio:30,icon:"🔏",complejidad:"moderada",
+    desc:"Uso indebido de datos, deuda en centrales de riesgo, derechos ARCO, INFOCORP.",
+    faqs:["Aparezco en INFOCORP pero ya pagué mi deuda, ¿qué hago?","Una empresa usa mis datos sin mi autorización.","¿Cómo ejerzo mis derechos ARCO ante una empresa?","Me llaman constantemente por una deuda que no es mía.","¿Puedo pedir que eliminen mis datos de una base de datos?"] },
+  { id:"deudas",area:"Cobro y Defensa de Deudas",precio:35,icon:"💳",complejidad:"moderada",
+    desc:"Recuperar deudas impagas, oponerse a cobros indebidos, acuerdos de pago, pagarés.",
+    faqs:["Me deben dinero y no me pagan, ¿cómo cobro?","Tengo una deuda que no reconozco, ¿cómo la refuto?","¿Qué es un proceso de ejecución de garantías?","Firmé un pagaré y no puedo pagar, ¿qué pasa?","¿Puedo llegar a un acuerdo de pago con mi acreedor?"] },
 ];
 
 const ESCRITOS = [
@@ -106,7 +115,7 @@ const LABELS_MAP = {
   nombre_demandante:"Nombre del demandante",nombre_demandado:"Nombre del demandado",nombre_hijo:"Nombre del menor",edad_hijo:"Edad del menor",monto_solicitado:"Monto solicitado (S/)",juzgado_destino:"Juzgado de destino",expediente:"N° de expediente",juzgado:"Juzgado",fecha_resolucion:"Fecha de resolución",fundamentos:"Fundamentos",denunciante:"Nombre del denunciante",denunciado:"Nombre del denunciado",hechos:"Descripción de los hechos",fecha_hechos:"Fecha de los hechos",pruebas:"Pruebas disponibles",remitente:"Remitente",destinatario:"Destinatario",asunto:"Asunto",contenido:"Contenido / pretensión",plazo_respuesta:"Plazo de respuesta (días)",trabajador:"Nombre del trabajador",empleador:"Nombre del empleador",cargo:"Cargo",beneficios_reclamados:"Beneficios que reclama",monto_total:"Monto total (S/)",hechos_a_contestar:"Hechos a contestar",fundamentos_defensa:"Fundamentos de defensa",tipo_medida:"Tipo de medida cautelar",bien_afectado:"Bien afectado",causal_casacion:"Causal de casación",fundamentos_juridicos:"Fundamentos jurídicos",arrendador:"Nombre del arrendador",arrendatario:"Nombre del arrendatario",direccion_inmueble:"Dirección del inmueble",monto_mensual:"Renta mensual (S/)",duracion_meses:"Duración (meses)",fecha_inicio:"Fecha de inicio",garantia_meses:"Meses de garantía",rubro_negocio:"Rubro del negocio",garantia:"Garantía (S/)",direccion_local:"Dirección del local",vendedor:"Nombre del vendedor",comprador:"Nombre del comprador",descripcion_inmueble:"Descripción del inmueble",partida_registral:"Partida registral (SUNARP)",precio_venta:"Precio de venta (S/)",forma_pago:"Forma de pago",fecha_entrega:"Fecha de entrega",precio_total:"Precio total (S/)",cuota_inicial:"Cuota inicial (S/)",cuotas:"N° de cuotas",monto_cuota:"Monto por cuota (S/)",monto_arras:"Monto de arras (S/)",plazo_escritura:"Plazo para escritura (días)",penalidad:"Penalidad por incumplimiento",quien_puede_desistir:"¿Quién puede desistir?",plazo_retracto:"Plazo de retracto (días)",descripcion_bien:"Descripción del bien",precio:"Precio (S/)",forma_entrega:"Forma de entrega",prestamista:"Nombre del prestamista",prestatario:"Nombre del prestatario",monto:"Monto del préstamo (S/)",interes_mensual:"Interés mensual (%)",plazo_meses:"Plazo (meses)",fecha_desembolso:"Fecha de desembolso",comodante:"Nombre del comodante",comodatario:"Nombre del comodatario",duracion:"Duración",condiciones_devolucion:"Condiciones de devolución",remuneracion:"Remuneración mensual (S/)",fecha_fin:"Fecha de fin",causa_objetiva:"Causa objetiva",lugar_trabajo:"Lugar de trabajo",horario:"Horario de trabajo",comitente:"Nombre del comitente",locador:"Nombre del locador",servicio:"Descripción del servicio",honorario_mensual:"Honorario mensual (S/)",razon_social:"Razón social",socios:"Socios (separados por coma)",aportes:"Aportes de cada socio (S/)",objeto_social:"Objeto social",domicilio:"Domicilio fiscal",gerente:"Gerente general",capital_social:"Capital social (S/)",titular:"Nombre del titular",capital_inicial:"Capital inicial (S/)",porcentajes:"Porcentajes de participación",distribucion_utilidades:"Distribución de utilidades",causales_exclusion:"Causales de exclusión de socio",derecho_preferencia:"Derecho de preferencia",empresa:"Nombre de la empresa",fecha_junta:"Fecha de la junta",socios_asistentes:"Socios asistentes",agenda:"Agenda de la junta",acuerdos:"Acuerdos adoptados",presidente_junta:"Presidente de la junta",cedente:"Nombre del cedente",cesionario:"Nombre del cesionario",numero_acciones:"N° de acciones",porcentaje:"Porcentaje que representa",precio_cesion:"Precio de cesión (S/)",fecha:"Fecha",garantia_meses2:"Meses de garantía",
 };
 
-const YAPE = { numero:"+51 956 663 286", titular:"Ochoa Maldonado & Abogados S. Civil" };
+const YAPE = { numero:"+51 999 000 111", titular:"Ochoa Maldonado & Abogados S. Civil" };
 const fmt = n => `S/ ${Number(n).toFixed(2)}`;
 const contarPalabras = t => t.trim() === "" ? 0 : t.trim().split(/\s+/).length;
 
@@ -567,12 +576,19 @@ function FlujoCon({ onBack }) {
               fontFamily:"'Cormorant Garamond', serif",outline:"none",resize:"vertical",
               minHeight:100,boxSizing:"border-box" }} />
           {sobrePalabras && (
-            <div style={{ color:B.red,fontSize:11,marginTop:3 }}>
-              ⚠ Excede el límite de {MAX_PALABRAS} palabras. Por favor, sea más conciso o divida en varias consultas.
+            <div style={{ color:B.red, fontSize:11, marginTop:3, background:`${B.red}10`,
+              border:`1px solid ${B.red}30`, borderRadius:6, padding:"6px 10px" }}>
+              ⚠ Su consulta excede las {MAX_PALABRAS} palabras ({palabras} palabras).
+              Por favor resuma un poco para continuar.
             </div>
           )}
-          {!sobrePalabras && palabras > 0 && (
-            <div style={{ color:B.textDim,fontSize:10,marginTop:2 }}>
+          {!sobrePalabras && palabras > MAX_PALABRAS*0.8 && palabras > 0 && (
+            <div style={{ color:B.yellow, fontSize:10, marginTop:2 }}>
+              ⚠ Le quedan solo {MAX_PALABRAS-palabras} palabras
+            </div>
+          )}
+          {!sobrePalabras && palabras > 0 && palabras <= MAX_PALABRAS*0.8 && (
+            <div style={{ color:B.textDim, fontSize:10, marginTop:2 }}>
               {MAX_PALABRAS-palabras} palabras restantes
             </div>
           )}
